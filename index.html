@@ -16,8 +16,20 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+        }
+    
+      .main-container {
+      display: flex;
+      flex-wrap: wrap; /* supaya nggak maksa sejajar kalau layar kecil */
+      justify-content: center;
+      gap: 20px;
     }
-
+    
+      .left-column, .right-column {
+      flex: 1 1 400px;
+      max-width: 600px;
+    }
+    
     .container {
       max-width: 800px;
       width: 100%;
@@ -122,9 +134,9 @@
 
   <div>
   <h2>About The Author</h2>
-  <p><strong>Skyler Mason</strong> is a financial wellness enthusiast with years of experience simplifying personal finance for everyday people. Passionate about helping others break free from debt cycles, Skyler created The 60-Minute Credit Card Debt Solution to provide practical, no-fluff guidance. Skyler believes everyone deserves a fresh start and financial clarity without fear or overwhelm.</p>
-  </div>
-  
+    <div style="text-align: center;">
+      <p><strong>Skyler Mason</strong> is a financial wellness enthusiast with years of experience simplifying personal finance for everyday people. Passionate about helping others break free from debt cycles, Skyler created The 60-Minute Credit Card Debt Solution to provide practical, no-fluff guidance. Skyler believes everyone deserves a fresh start and financial clarity without fear or overwhelm.</p>
+    </div>
   <div>
   <img src="images/The 60-Minute Credit Card Debt Solution displayed as a physical book, smartphone, and tablet — offering versatile and convenient ways to master your credit card debt elimination strategy.png" alt="The 60-Minute Credit Card Debt Solution displayed as a physical book, smartphone, and tablet" width="400">
 
@@ -153,10 +165,5 @@
     </ul>
   </div>
 
-  <div style="margin-bottom: 20px;">
-    <p>Div pertama</p>
-  </div>
-
-  
 </body>
 </html>
