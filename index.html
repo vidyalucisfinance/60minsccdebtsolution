@@ -8,15 +8,45 @@
     body {
       font-family: 'Arial Black', Arial, sans-serif;
       font-size: 20px;
-      margin: 40px;
-      line-height: 1.6;
+      margin: 0;
+      padding: 0;
       background-color: #f8f8f8;
-      color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .header-image {
+      background-image: url("your-image.jpg"); /* Ganti dengan nama file gambar kamu */
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     }
 
     h1 {
       font-size: 36px;
-      margin-bottom: 20px;
+      margin: 0;
     }
 
     h2 {
@@ -47,62 +77,40 @@
       margin-bottom: 8px;
     }
 
-    .red {
-      color: red;
-    }
+    .red { color: red; }
+    .green { color: green; }
+    .blue { color: blue; }
 
-    .green {
-      color: green;
-    }
-
-    .blue {
-      color: blue;
-    }
-
-    .bold {
-      font-weight: bold;
-    }
-
-    .italic {
-      font-style: italic;
-    }
-
-    .underline {
-      text-decoration: underline;
-    }
-
-    .strikethrough {
-      text-decoration: line-through;
-    }
-
-    .box {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
+    .bold { font-weight: bold; }
+    .italic { font-style: italic; }
+    .underline { text-decoration: underline; }
+    .strikethrough { text-decoration: line-through; }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Welcome to My Landing Page</h1>
+  <div class="container">
+    <div class="box">
+      <div class="header-image">
+        <h1>Welcome to My Landing Page</h1>
+      </div>
 
-    <p>This is a <span class="bold">bold</span>, <span class="italic">italic</span>, <span class="underline">underlined</span>, and <span class="strikethrough">strikethrough</span> sentence.</p>
+      <p>This is a <span class="bold">bold</span>, <span class="italic">italic</span>, <span class="underline">underlined</span>, and <span class="strikethrough">strikethrough</span> sentence.</p>
 
-    <h2>Color Examples</h2>
-    <p class="red">This text is red.</p>
-    <p class="green">This text is green.</p>
-    <p class="blue">This text is blue.</p>
+      <h2>Color Examples</h2>
+      <p class="red">This text is red.</p>
+      <p class="green">This text is green.</p>
+      <p class="blue">This text is blue.</p>
 
-    <h3>Feature List</h3>
-    <ul>
-      <li>Easy to edit</li>
-      <li>Clean layout</li>
-      <li>All-in-one HTML file</li>
-    </ul>
+      <h3>Feature List</h3>
+      <ul>
+        <li>Easy to edit</li>
+        <li>Clean layout</li>
+        <li>All-in-one HTML file</li>
+      </ul>
 
-    <h4>Footer</h4>
-    <p>Made with ❤️ using GitHub Pages</p>
+      <h4>Footer</h4>
+      <p>Made with ❤️ using GitHub Pages</p>
+    </div>
   </div>
 </body>
 </html>
