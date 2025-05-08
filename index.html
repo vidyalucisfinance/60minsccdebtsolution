@@ -60,14 +60,9 @@
       max-width: 1000px;
     }
 
-      .cta-wrapper {
+    .cta-wrapper {
       text-align: center;
       margin: 40px auto;
-    }
-    
-    .cta-section {
-      text-align: center;
-      margin-top: 40px;
     }
     
     .cta-button {
@@ -88,34 +83,33 @@
       100% { transform: scale(1); }
     }
     
-    .price-info {
-      margin-top: 10px;
-      display: inline-block;
+    .price-wrapper {
+      margin-top: 12px;
     }
     
-    .price-top {
+    .price-main {
       display: flex;
       justify-content: center;
       align-items: baseline;
-      gap: 12px;
+      gap: 10px;
     }
     
-    .current-price {
+    .price-discounted {
+      font-size: 30px;
       font-weight: bold;
-      font-size: 20px;
       color: black;
     }
     
-    .discount {
+    .price-off {
       color: red;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 22px;
     }
     
-    .original-price {
-      text-decoration: line-through;
-      color: black;
+    .price-original {
       font-size: 14px;
+      color: black;
+      text-decoration: line-through;
       margin-top: 4px;
     }
     
@@ -226,18 +220,17 @@
         </ul>
       </div>
 
-   <div class="cta-wrapper"> 
-    <div class="cta-section">
-      <button class="cta-button">GET INSTANT ACCESS</button>
-      <div class="price-info">
-        <div class="price-top">
-          <div class="current-price">ONLY $23</div>
-          <div class="discount">83% OFF</div>
-        </div>
-        <div class="original-price">$133</div>
+   <div class="cta-wrapper">
+    <button class="cta-button">GET INSTANT ACCESS</button>
+
+    <div class="price-wrapper">
+      <div class="price-main">
+        <span class="price-discounted">ONLY $23</span>
+        <span class="price-off">83% OFF</span>
       </div>
+      <div class="price-original">$133</div>
     </div>
-   </div>
+    </div>
   </div>  
 </div>
   
