@@ -13,6 +13,7 @@
       width: 100%;
       margin: 0 auto;
       padding: 0px;
+      overflow-x: hidden;
       background-color: #f8f8f8;
     }
     
@@ -42,7 +43,7 @@
       background-repeat: no-repeat;
       margin: 0;
       padding: 0;
-      width: 100vw;
+      width: 100%;
       min-height: 100vh;
     }
     
@@ -53,6 +54,66 @@
       max-width: 1000px;
     }
 
+        .cta-section {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .cta-yellow-button {
+      background-color: #ffcc00;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .cta-yellow-button:hover {
+      animation: pulse 1s ease-out;
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.7);
+      }
+      70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 12px rgba(255, 204, 0, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 204, 0, 0);
+      }
+    }
+    
+    .price-info {
+      margin-top: 10px;
+      font-size: 18px;
+      color: white;
+    }
+    
+    .current-price {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .discount {
+      color: red;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .original-price {
+      text-decoration: line-through;
+      opacity: 0.7;
+    }
+    
       .author-section {
       max-width: 1000px; /* samakan dengan .hero-content */
       margin: 0 auto;
@@ -163,7 +224,18 @@
           <li><strong>Lifetime Access to All The Materials</strong> — download them, print them, and go through them at your own pace.</li>
           <li><strong>BONUS GIFTS</strong> (Total Value $74)</li>
         </ul>
-      </div> 
+      </div>
+    
+  <div class="cta-section">
+  <button class="cta-yellow-button">GET INSTANT ACCESS</button>
+  <div class="price-info">
+    <span class="current-price">ONLY $23</span>
+    <span class="discount">83% OFF</span>
+    <span class="original-price">$133</span>
+  </div>
+</div>
+
+    
 </div>    
 </body>
 </html>
