@@ -159,6 +159,24 @@
       margin-bottom: 8px;
     }
 
+        .checklist {
+      list-style: none; /* hilangkan bullet default */
+      padding-left: 0;  /* hilangkan indentasi default */
+    }
+    
+    .checklist li {
+      position: relative;
+      padding-left: 28px; /* beri ruang untuk icon */
+      margin-bottom: 10px; /* spasi antar item */
+    }
+    
+    .checklist li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
     .red { color: red; }
     .green { color: green; }
     .blue { color: blue; }
