@@ -159,21 +159,24 @@
       margin-bottom: 8px;
     }
 
-        .checklist {
-      list-style: none; /* hilangkan bullet default */
-      padding-left: 0;  /* hilangkan indentasi default */
+      .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
     
-    .checklist li {
+      .checklist li {
       position: relative;
-      padding-left: 28px; /* beri ruang untuk icon */
-      margin-bottom: 10px; /* spasi antar item */
+      padding-left: 1.5em;
+      margin-bottom: 1em;
+      line-height: 1.6;
     }
     
-    .checklist li::before {
+      .checklist .checkmark {
       position: absolute;
       left: 0;
-      top: 0;
+      color: green;
+      font-weight: bold;
     }
 
     .red { color: red; }
@@ -260,13 +263,13 @@
     <div>
       <div style="text-align: justify;">
         <ul class="checklist">
-          <li><i class="fas fa-check-circle" style="color: green;"></i> <strong>Reduced Principal Balances:</strong> Your debt will shrink faster than you ever thought possible.</li>
-          <li><i class="fas fa-check-circle" style="color: green;"></i> <strong>Create Payment Plans You Can Actually Stick To:</strong> For daily expenses, monthly bills, emergency funds, and long-term financial goals.</li>
-          <li><i class="fas fa-check-circle" style="color: green;"></i> <strong>Improved Financial Confidence:</strong> When you learn how to communicate with creditors, you’ll become less intimidated and anxious.</li>
-          <li><i class="fas fa-check-circle" style="color: green;"></i> <strong>Less Resistance from Creditors:</strong> You’ll know how to approach credit card companies so they’re more likely to work with you on reducing your debt.</li>
-          <li><i class="fas fa-check-circle" style="color: green;"></i> <strong>Stress-Free Financial Management:</strong> Bills will be paid on time, without unnecessary stress and anxiety.</li>
-          <li><i class="fas fa-check-circle" style="color: green;"></i> <strong>Emotional Regulation:</strong> You’ll learn how to control financial anxiety whenever you feel overwhelmed, worried, or frustrated about money.</li>
-          <li><i class="fas fa-check-circle" style="color: green;"></i> <strong>Healthy Financial Boundaries:</strong> You’ll no longer feel powerless when facing your debt as you’ll learn how to take control of your financial future.</li>
+          <li><span class="checkmark">&#10003;</span> <strong>Reduced Principal Balances:</strong> Your debt will shrink faster than you ever thought possible.</li>
+          <li><span class="checkmark">&#10003;</span> <strong>Create Payment Plans You Can Actually Stick To:</strong> For daily expenses, monthly bills, emergency funds, and long-term financial goals.</li>
+          <li><span class="checkmark">&#10003;</span> <strong>Improved Financial Confidence:</strong> When you learn how to communicate with creditors, you’ll become less intimidated and anxious.</li>
+          <li><span class="checkmark">&#10003;</span> <strong>Less Resistance from Creditors:</strong> You’ll know how to approach credit card companies so they’re more likely to work with you on reducing your debt.</li>
+          <li><span class="checkmark">&#10003;</span> <strong>Stress-Free Financial Management:</strong> Bills will be paid on time, without unnecessary stress and anxiety.</li>
+          <li><span class="checkmark">&#10003;</span> <strong>Emotional Regulation:</strong> You’ll learn how to control financial anxiety whenever you feel overwhelmed, worried, or frustrated about money.</li>
+          <li><span class="checkmark">&#10003;</span> <strong>Healthy Financial Boundaries:</strong> You’ll no longer feel powerless when facing your debt as you’ll learn how to take control of your financial future.</li>
         </ul>
       </div>
     </div>  
