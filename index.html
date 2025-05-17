@@ -218,27 +218,20 @@
       margin-right: 0.5em;
     }
 
-    .review-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
     }
   
     .review-card {
-      flex: 1 1 300px;
-      max-width: 350px;
       background: white;
-      padding: 1.5rem;
+      padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease;
-    }
-  
-    .review-card:hover {
-      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
     }
   
     .profile-img {
@@ -246,9 +239,20 @@
       height: 70px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 0 auto;
-      display: block;
+      margin-bottom: 1rem;
       border: 2px solid #eee;
+    }
+  
+    .location {
+      color: #888;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+  
+    .stars {
+      color: #ffc107;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
   
     @media (max-width: 900px) {
@@ -261,8 +265,7 @@
       .review-grid {
         grid-template-columns: 1fr;
       }
-    }
-    
+    }    
       .faq-section {
       max-width: 800px;
       margin: 60px auto;
@@ -540,47 +543,38 @@
   </div>
 
 <section style="background: #f9f9f9; padding: 4rem 1rem;">
-  <div class="review-container">
+  <div class="review-grid">
 
-    <!-- Review 1 -->
+    <!-- Card 1 -->
     <div class="review-card">
       <img src="https://i.imgur.com/fZy6S91.png" alt="Michael" class="profile-img">
-      <h3 style="text-align: center; margin-top: 1rem;">Michael T.</h3>
-      <p style="text-align: center; color: #666;">Texas, USA</p>
-      <p style="text-align: center; color: #ffc107;">★★★★★</p>
-      <p>
-        "Before the 60-Minute Credit Card Debt Solution, I didn’t know what options I had with my creditors.
-        Now I see my debt differently, the negotiation process is clearer to me, and I understand more about
-        how credit card companies operate. I feel more empowered, and I also understand my rights, which I didn’t before."
-      </p>
+      <h3>Michael T.</h3>
+      <p class="location">Texas, USA</p>
+      <p class="stars">★★★★★</p>
+      <p>"Before the 60-Minute Credit Card Debt Solution, I didn’t know what options I had with my creditors..."</p>
     </div>
 
-    <!-- Review 2 -->
+    <!-- Card 2 -->
     <div class="review-card">
       <img src="https://i.imgur.com/I9h5n6u.png" alt="Sarah" class="profile-img">
-      <h3 style="text-align: center; margin-top: 1rem;">Sarah Johnson</h3>
-      <p style="text-align: center; color: #666;">Manchester, UK</p>
-      <p style="text-align: center; color: #ffc107;">★★★★★</p>
-      <p>
-        "The 60-Minute Credit Card Debt Solution book is great! It’s a quick read, has many practical exercises,
-        and even includes templates for negotiation calls. I’ve seen major improvement. I can’t wait to continue using it!"
-      </p>
+      <h3>Sarah Johnson</h3>
+      <p class="location">Manchester, UK</p>
+      <p class="stars">★★★★</p>
+      <p>"The 60-Minute Credit Card Debt Solution book is great! It’s a quick read, has many practical exercises..."</p>
     </div>
 
-    <!-- Review 3 -->
+    <!-- Card 3 -->
     <div class="review-card">
       <img src="https://i.imgur.com/dE1J7xR.png" alt="Robert" class="profile-img">
-      <h3 style="text-align: center; margin-top: 1rem;">Robert K.</h3>
-      <p style="text-align: center; color: #666;">Toronto, Canada</p>
-      <p style="text-align: center; color: #ffc107;">★★★★★</p>
-      <p>
-        "I had problems with extremely stressful reactions when dealing with credit card debt. Nothing calmed me down.
-        After this system, many things have already made sense. Thank you very much for everything!"
-      </p>
+      <h3>Robert K.</h3>
+      <p class="location">Toronto, Canada</p>
+      <p class="stars">★★★★★</p>
+      <p>"I had problems with extremely stressful reactions when dealing with credit card debt. After this system..."</p>
     </div>
+
   </div>
 </section>
-
+  
 <div style="text-align: center;">
   <h2><strong>Here’s Everything You’ll Get in <span style="color: blue;">The 60-Minute Credit Card Debt Solution</span> 'TODAY'</strong></h2>
 </div>
