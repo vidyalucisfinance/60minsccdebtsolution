@@ -218,30 +218,35 @@
       margin-right: 0.5em;
     }
 
-    .review-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    /* Container untuk semua testimoni */
+    .testimonials-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-  
+    
+    /* Card masing-masing testimoni */
     .review-card {
-    width: 320px; /* atau 320px / 350px tergantung kebutuhan */
-    padding: 20px;
-    margin: 10px;
-    border-radius: 12px;
-    background-color: white;
-    box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    text-align: justify;
+      width: 340px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      text-align: justify;
     }
-  
-    .profile-img {
+    
+    /* Styling gambar profil */
+    .review-card img {
       width: 70px;
       height: 70px;
-      border-radius: 50%;
       object-fit: cover;
-      margin: 0 auto;
+      border-radius: 50%;
       display: block;
+      margin: 0 auto 10px;
     }
   
     .location {
