@@ -219,20 +219,20 @@
     }
 
     .review-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(280px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     }
   
     .review-card {
-      background: white;
-      padding: 2.5rem 2rem;
-      font-size: 1.05rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-      text-align: justify;
+    width: 320px; /* atau 320px / 350px tergantung kebutuhan */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    text-align: justify;
     }
   
     .profile-img {
@@ -240,8 +240,8 @@
       height: 70px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 1rem;
-      border: 2px solid #eee;
+      margin: 0 auto;
+      display: block;
     }
   
     .location {
