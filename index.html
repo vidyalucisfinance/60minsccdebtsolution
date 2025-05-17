@@ -218,59 +218,45 @@
       margin-right: 0.5em;
     }
 
-    .testimonial-container {
+    .review-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
-    
-    .testimonial-card {
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      padding: 24px;
-      width: 320px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  
+    .review-card {
+      flex: 1 1 300px;
+      max-width: 350px;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
     }
-    
-    .testimonial-card img {
-      width: 72px;
-      height: 72px;
+  
+    .review-card:hover {
+      transform: translateY(-5px);
+    }
+  
+    .profile-img {
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 12px;
+      margin: 0 auto;
+      display: block;
+      border: 2px solid #eee;
     }
-    
-    .testimonial-card h3 {
-      margin: 8px 0 4px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    
-    .testimonial-card .location {
-      font-style: italic;
-      color: #777;
-      margin-bottom: 6px;
-    }
-    
-    .testimonial-card .stars {
-      color: #f5b301;
-      font-size: 16px;
-      margin-bottom: 12px;
-    }
-    
-    .testimonial-card .text {
-      font-size: 15px;
-      text-align: justify;
-      line-height: 1.6;
-    }
-    
+  
+    @media (max-width: 768px) {
+      .review-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }    
       .faq-section {
       max-width: 800px;
       margin: 60px auto;
@@ -547,32 +533,46 @@
     <h2><strong>Impressions from Others Who Have Already Read the E-Book</strong></h2>
   </div>
 
-<section id="testimonials" style="padding: 60px 20px; background-color: #f9f9f9;">
-  <h2 style="text-align: center; font-size: 32px; font-weight: bold; margin-bottom: 40px;">Already Read the E-Book</h2>
-  <div class="testimonial-container">
-    <div class="testimonial-card">
-      <img src="img/michael.jpg" alt="Michael T.">
-      <h3>Michael T.</h3>
-      <p class="location">Texas, USA</p>
-      <p class="stars">★★★★★</p>
-      <p class="text">"Before the 60-Minute Credit Card Debt Solution, I didn’t know what options I had with my creditors. Now I see my debt differently, the negotiation process is clearer to me, and I understand more about how credit card companies operate..."</p>
+<section style="background: #f9f9f9; padding: 4rem 1rem;">
+  <div class="review-container">
+
+    <!-- Review 1 -->
+    <div class="review-card">
+      <img src="https://i.imgur.com/fZy6S91.png" alt="Michael" class="profile-img">
+      <h3 style="text-align: center; margin-top: 1rem;">Michael T.</h3>
+      <p style="text-align: center; color: #666;">Texas, USA</p>
+      <p style="text-align: center; color: #ffc107;">★★★★★</p>
+      <p>
+        "Before the 60-Minute Credit Card Debt Solution, I didn’t know what options I had with my creditors.
+        Now I see my debt differently, the negotiation process is clearer to me, and I understand more about
+        how credit card companies operate. I feel more empowered, and I also understand my rights, which I didn’t before."
+      </p>
     </div>
 
-    <div class="testimonial-card">
-      <img src="img/sarah.jpg" alt="Sarah Johnson">
-      <h3>Sarah Johnson</h3>
-      <p class="location">Manchester, UK</p>
-      <p class="stars">★★★★★</p>
-      <p class="text">"The 60-Minute Credit Card Debt Solution book is great! It’s a quick read, has many practical exercises, and it even includes templates for negotiation calls. I’ve seen a major improvement!"</p>
+    <!-- Review 2 -->
+    <div class="review-card">
+      <img src="https://i.imgur.com/I9h5n6u.png" alt="Sarah" class="profile-img">
+      <h3 style="text-align: center; margin-top: 1rem;">Sarah Johnson</h3>
+      <p style="text-align: center; color: #666;">Manchester, UK</p>
+      <p style="text-align: center; color: #ffc107;">★★★★★</p>
+      <p>
+        "The 60-Minute Credit Card Debt Solution book is great! It’s a quick read, has many practical exercises,
+        and even includes templates for negotiation calls. I’ve seen major improvement. I can’t wait to continue using it!"
+      </p>
     </div>
 
-    <div class="testimonial-card">
-      <img src="img/robert.jpg" alt="Robert K.">
-      <h3>Robert K.</h3>
-      <p class="location">Toronto, Canada</p>
-      <p class="stars">★★★★★</p>
-      <p class="text">"I had problems with extremely stressful reactions when dealing with credit card debt. After this system, many things really changed for me..."</p>
+    <!-- Review 3 -->
+    <div class="review-card">
+      <img src="https://i.imgur.com/dE1J7xR.png" alt="Robert" class="profile-img">
+      <h3 style="text-align: center; margin-top: 1rem;">Robert K.</h3>
+      <p style="text-align: center; color: #666;">Toronto, Canada</p>
+      <p style="text-align: center; color: #ffc107;">★★★★★</p>
+      <p>
+        "I had problems with extremely stressful reactions when dealing with credit card debt. Nothing calmed me down.
+        After this system, many things have already made sense. Thank you very much for everything!"
+      </p>
     </div>
+
   </div>
 </section>
   
