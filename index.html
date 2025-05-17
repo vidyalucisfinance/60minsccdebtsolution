@@ -218,54 +218,42 @@
       margin-right: 0.5em;
     }
 
-      .reviews-container {
+    .testimonials {
       display: flex;
-      justify-content: space-between;
-      gap: 30px;
+      justify-content: center;
       flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 0 20px;
+      gap: 20px;
+      padding: 40px;
     }
-  
-    .review-card {
-      flex: 1 1 300px;
-      text-align: center;
-      background-color: #fff;
-      padding: 25px;
+    
+    .testimonial {
+      flex: 1 1 300px; /* grow 1, shrink 1, minimum 300px */
+      max-width: 300px;
+      background: #fff;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
-  
-    .review-card img {
-      width: 120px;
-      height: 120px;
+    
+    .profile-pic {
+      width: 100px;
+      height: 100px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-  
-    .review-card h3 {
-      margin: 10px 0 5px;
-      font-size: 18px;
-    }
-  
-    .stars {
-      color: #f5b50a;
-      margin: 5px 0;
-    }
-  
-    .location {
-      color: #666;
-      font-size: 14px;
       margin-bottom: 10px;
     }
-  
-    .review-text {
-      font-size: 15px;
-      color: #333;
-      text-align: justify;
+    
+    .stars {
+      color: gold;
+      font-size: 1.2rem;
+      margin: 5px 0;
+    }
+    
+    .location {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 10px;
     }
 
         .faq-section {
@@ -324,13 +312,6 @@
     .strikethrough { text-decoration: line-through; }
   </style>
 </head>
-<script>
-  document.querySelectorAll(".faq-item").forEach(item => {
-    item.addEventListener("click", () => {
-      item.classList.toggle("active");
-    });
-  });
-</script>
 <body>
 
 <body>  
@@ -551,40 +532,31 @@
     <h2><strong>Impressions from Others Who Have Already Read the E-Book</strong></h2>
   </div>
 
-  <div class="reviews-container">
-  <!-- Review 1 -->
-  <div class="review-card">
-    <img src="images/review-michael-credit-card-debt-solution.png" alt="review-michael-credit-card-debt-solution">
+<section class="testimonials">
+  <div class="testimonial">
+    <img src="review-michael-credit-card-debt-solution.png" alt="review-michael-credit-card-debt-solution." class="profile-pic" />
     <h3>Michael T.</h3>
-    <div class="stars">★★★★★</div>
-    <div class="location">Texas, USA</div>
-    <p class="review-text">
-      "Before the 60-Minute Credit Card Debt Solution, I didn’t know what options I had with my creditors. Now I see my debt differently, the negotiation process is clearer to me, and I understand more about how credit card companies operate. I feel more empowered, and I also understand my rights, which I didn’t before. Thank you for being there!"
-    </p>
+    <p class="location">Texas, USA</p>
+    <p class="stars">★★★★★</p>
+    <p>"Before the 60-Minute Credit Card Debt Solution, I didn’t know what options I had with my creditors. Now I see my debt differently, the negotiation process is clearer to me, and I understand more about how credit card companies operate. I feel more empowered, and I also understand my rights, which I didn’t before. Thank you for being there!"</p>
   </div>
 
-  <!-- Review 2 -->
-  <div class="review-card">
-    <img src="images/review-sarah-practical-money-guide.png" alt="review-sarah-pratical-money-guide">
+  <div class="testimonial">
+    <img src="review-sarah-practical-money-guide.png" alt="review-sarah-practical-money-guide." class="profile-pic" />
     <h3>Sarah Johnson</h3>
-    <div class="stars">★★★★</div>
-    <div class="location">Manchester, UK</div>
-    <p class="review-text">
-      "The 60-Minute Credit Card Debt Solution book is great! It’s a quick read, has many practical exercises, and it even includes templates for negotiation calls. I’ve been implementing some of the tactics with my credit card companies and have already seen a major improvement. I can’t wait to continue using it!" 
-    </p>
+    <p class="location">Manchester, UK</p>
+    <p class="stars">★★★★</p>
+    <p>"The 60-Minute Credit Card Debt Solution book is great! It’s a quick read, has many practical exercises, and it even includes templates for negotiation calls. I’ve been implementing some of the tactics with my credit card companies and have already seen a major improvement. I can’t wait to continue using it!"</p>
   </div>
 
-  <!-- Review 3 -->
-  <div class="review-card">
-    <img src="images/review-robert-financial-strategy-feedback.png" alt="review-robert-financial-strategy-feedback">
+  <div class="testimonial">
+    <img src="review-robert-financial-strategy-feedback.png" alt="review-robert-financial-strategy-feedback." class="profile-pic" />
     <h3>Robert K.</h3>
-    <div class="stars">★★★★★</div>
-    <div class="location">Toronto, Canada</div>
-    <p class="review-text">
-      "I had problems with extremely stressful reactions/outbursts when dealing with my $15,000 credit card debt. I also had problems focusing on a solution and remembering all the details. I was constantly anxious. Nothing calmed me down. After implementing the 60-Minute Credit Card Debt Solution, many things have already come in handy and useful to me. We now prepare for calls with creditors earlier, to get ready for the negotiation. And I have to admit that it is working. I feel much better than before. Keep up the great work and thank you very much for everything!"
-    </p>
+    <p class="location">Toronto, Canada</p>
+    <p class="stars">★★★★★</p>
+    <p>"I had problems with extremely stressful reactions/outbursts when dealing with my $15,000 credit card debt. I also had problems focusing on a solution and remembering all the details. I was constantly anxious. Nothing calmed me down. After implementing the 60-Minute Credit Card Debt Solution, many things have already come in handy and useful to me. We now prepare for calls with creditors earlier, to get ready for the negotiation. And I have to admit that it is working. I feel much better than before. Keep up the great work and thank you very much for everything!"</p>
   </div>
-</div>
+</section>
 
 <div style="text-align: center;">
   <h2><strong>Here’s Everything You’ll Get in <span style="color: blue;">The 60-Minute Credit Card Debt Solution</span> 'TODAY'</strong></h2>
@@ -701,6 +673,19 @@
     </div>
   </div>  
 </div>
-  
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggles = document.querySelectorAll('.faq-question');
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const answer = toggle.nextElementSibling;
+        toggle.classList.toggle('active');
+        answer.classList.toggle('open');
+      });
+    });
+  });
+</script>
 </body>
 </html>
