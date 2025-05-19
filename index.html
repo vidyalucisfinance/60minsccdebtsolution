@@ -260,6 +260,22 @@
       }
     }
 
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 kolom dengan lebar sama */
+      grid-gap: 15px; /* jarak antar gambar */
+      max-width: 600px; /* sesuaikan lebar grid */
+      margin: auto;
+    }
+
+    .grid-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px; /* opsional biar agak rounded */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* opsional biar terlihat keren */
+    }
+    
     .faq-section {
       max-width: 800px;
       margin: 40px auto;
@@ -705,6 +721,19 @@
   </div>
 </section>
 
+<div style="text-align: center;">
+  <h2><strong>Real Conversations, Real Results</strong></h2>
+  <p>See what real customers are saying in their own words. These unfiltered messages speak louder than any marketing copy, because the transformation is <strong>REAL</strong>.</p>
+</div>
+  <div class="grid-container">
+    <img src="images/Amanda's testimonial expressing relief and confidence after applying the strategies from the credit card debt e-book.png" alt="Amanda's testimonial expressing relief and confidence after applying the strategies from the credit card debt e-book." />
+    <img src="images/Kevin's review appreciating the direct and practical approach of the e-book without overwhelming financial jargon.png" alt="Kevin's review appreciating the direct and practical approach of the e-book without overwhelming financial jargon" />
+    <img src="images/Daniel describing how he applied the negotiation strategy from the e-book and successfully reduced his credit card bill.png" alt="Daniel describing how he applied the negotiation strategy from the e-book and successfully reduced his credit card bill" />
+    <img src="images/Vanessa sharing how the bonus templates from the e-book made organizing her finances a lot more practical and structured.png" alt="Vanessa sharing how the bonus templates from the e-book made organizing her finances a lot more practical and structured" />
+    <img src="images/Testimonial comparing the e-book to having a personal financial coach thanks to its clear and actionable steps" alt="Testimonial comparing the e-book to having a personal financial coach thanks to its clear and actionable steps" />
+    <img src="images/A testimonial which praising the e-book for being quick to read and highly useful, especially for the negotiation steps.png" alt="A testimonial which praising the e-book for being quick to read and highly useful, especially for the negotiation steps" />
+  </div>  
+  
 <script src="faq.js"></script>  
 </body>
 </html>
