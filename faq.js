@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const faqs = document.querySelectorAll(".faq-item");
+  const questions = document.querySelectorAll(".faq-question");
 
-  faqs.forEach((item) => {
-    item.addEventListener("click", () => {
-      const content = item.querySelector(".faq-answer");
-      const icon = item.querySelector(".arrow");
+  questions.forEach((question) => {
+    question.addEventListener("click", () => {
+      const answer = question.nextElementSibling;
+      const arrow = question.querySelector(".arrow");
 
-      content.classList.toggle("active");
-      icon.classList.toggle("open");
+      answer.classList.toggle("active");
+      arrow.classList.toggle("open");
     });
   });
 });
