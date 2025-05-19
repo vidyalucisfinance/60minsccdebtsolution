@@ -260,13 +260,39 @@
       }
     }
 
-      .faq-answer {
-      display: none;
-      padding: 10px 0;
+    .faq-section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    
+    .faq-item {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 15px 20px;
+      background-color: #f0f0f0;
+      position: relative;
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 20px;
     }
     
     .faq-answer.active {
-      display: block;
+      max-height: 500px; /* Cukup besar untuk semua jawaban */
+      padding-bottom: 15px;
     }
     
     .arrow {
@@ -608,18 +634,27 @@
 </div>
 
 <section class="faq-section">
-  <h2><strong>FREQUENTLY ASKED QUESTIONS</strong></h2>
+  <h2>FREQUENTLY ASKED QUESTIONS</h2>
 
   <div class="faq-item">
     <div class="faq-question">
-      What if I don’t have time to implement this system right now?
+      <strong>What if I don’t have time to implement this system right now?</strong>
       <span class="arrow">▼</span>
     </div>
     <div class="faq-answer">
-      You can go at your own pace! The system is flexible...
+      You can go at your own pace! The system is flexible enough to fit your schedule.
     </div>
   </div>
 
+  <div class="faq-item">
+    <div class="faq-question">
+      <strong>Can I buy this product as a gift?</strong>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      Yes, you can send the purchase to someone else as a gift.
+    </div>
+  </div>
 </section>
 
 <script src="faq.js"></script>  
