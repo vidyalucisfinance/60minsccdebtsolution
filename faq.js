@@ -1,13 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const questions = document.querySelectorAll(".faq-question");
+document.querySelectorAll(".faq-question").forEach((item) => {
+  item.addEventListener("click", () => {
+    const answer = item.nextElementSibling;
+    const icon = item.querySelector(".faq-toggle");
 
-  questions.forEach((question) => {
-    question.addEventListener("click", () => {
-      const answer = question.nextElementSibling;
-      const arrow = question.querySelector(".arrow");
-
-      answer.classList.toggle("active");
-      arrow.classList.toggle("open");
-    });
+    answer.classList.toggle("active"); // Show/hide answer
+    icon.classList.toggle("rotated"); // Optional: rotate icon
   });
 });
