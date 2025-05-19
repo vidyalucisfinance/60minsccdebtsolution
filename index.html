@@ -260,6 +260,24 @@
       }
     }
 
+      .faq-answer {
+      display: none;
+      padding: 10px 0;
+    }
+    
+    .faq-answer.active {
+      display: block;
+    }
+    
+    .arrow {
+      float: right;
+      transition: transform 0.3s ease;
+    }
+    
+    .arrow.open {
+      transform: rotate(180deg);
+    }
+    
     .red { color: red; }
     .green { color: green; }
     .blue { color: blue; }
@@ -589,9 +607,21 @@
   <p>Try <strong>The 60-Minute Credit Card Debt Solution</strong> 100% risk-free. If, for any reason, you’re not 100% satisfied with the e-book, simply send me an email at <span style="color: blue;">reyhanockta712+feedback@gmail.com</span> within 90 days of your purchase, and my team will return your full investment. No questions asked.</p>
 </div>
 
-<div class="faq-section">
+<section class="faq-section">
   <h2><strong>FREQUENTLY ASKED QUESTIONS</strong></h2>
-</div>
-  
+
+  <div class="faq-item">
+    <div class="faq-question">
+      What if I don’t have time to implement this system right now?
+      <span class="arrow">▼</span>
+    </div>
+    <div class="faq-answer">
+      You can go at your own pace! The system is flexible...
+    </div>
+  </div>
+
+</section>
+
+<script src="faq.js"></script>  
 </body>
 </html>
