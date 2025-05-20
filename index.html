@@ -111,7 +111,7 @@
       .price-discounted {
       font-size: 28px;
       font-weight: bold;
-      color: black;
+      color: green;
     }
     
       .price-off {
@@ -128,12 +128,30 @@
       opacity: 0.6;
     }
 
-      .countdown-timer {
+    #countdown {
       font-size: 32px;
-      font-weight: normal;
-      color: red;
-      margin-top: 10px;
-      margin-bottom: 5px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .count-box {
+      background: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      min-width: 60px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+  
+    .count-label {
+      font-size: 12px;
+      margin-top: 4px;
+      color: #ccc;
     }
 
       @media (max-width: 768px) {
@@ -461,9 +479,7 @@
     <div class="cta-wrapper">
       <div style="text-align: center;"><h3>OFFER EXPIRES IN:</h3></div>
         <div id="countdown" class="countdown-timer">02:15:30</div>
-          <button class="cta-button">GET INSTANT ACCESS NOW
-            <span class="price-discounted">ONLY $23</span>
-          </button>
+          <button class="cta-button">GET INSTANT ACCESS</button>
 
     <div class="price-wrapper">
       <div class="price-main">
@@ -841,44 +857,32 @@
 
 <script src="faq.js"></script>
 <script>
-  function startCountdown(duration, display) {
-    let endTime = localStorage.getItem("countdownEndTime");
+  // Ubah durasi di sini:
+  let hours = 2;
+  let minutes = 15;
+  let seconds = 30;
 
-    // Kalau belum ada, set end time sekarang + duration
-    if (!endTime) {
-      const now = new Date().getTime();
-      endTime = now + duration * 1000;
-      localStorage.setItem("countdownEndTime", endTime);
+  let totalSeconds = hours * 3600 + minutes * 60 + seconds;
+
+  function updateCountdown() {
+    const hrs = Math.floor(totalSeconds / 3600);
+    const mins = Math.floor((totalSeconds % 3600) / 60);
+    const secs = totalSeconds % 60;
+
+    document.getElementById('hoursBox').textContent = String(hrs).padStart(2, '0');
+    document.getElementById('minutesBox').textContent = String(mins).padStart(2, '0');
+    document.getElementById('secondsBox').textContent = String(secs).padStart(2, '0');
+
+    if (totalSeconds > 0) {
+      totalSeconds--;
+    } else {
+      clearInterval(timer);
     }
-
-    const timerInterval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = endTime - now;
-
-      if (distance <= 0) {
-        clearInterval(timerInterval);
-        display.textContent = "00:00:00";
-        localStorage.removeItem("countdownEndTime");
-      } else {
-        const hours = Math.floor((distance / (1000 * 60 * 60)));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        display.textContent =
-          String(hours).padStart(2, '0') + ":" +
-          String(minutes).padStart(2, '0') + ":" +
-          String(seconds).padStart(2, '0');
-      }
-    }, 1000);
   }
 
-  window.onload = function () {
-    const durationInSeconds = 60 * 10; // 10 menit
-    const display = document.getElementById("countdown");
-    if (display) {
-      startCountdown(durationInSeconds, display);
-    }
-  };
+  updateCountdown(); // initial call
+  const timer = setInterval(updateCountdown, 1000);
 </script>
+
 </body>
 </html>
