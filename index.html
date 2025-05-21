@@ -111,7 +111,7 @@
       .price-discounted {
       font-size: 28px;
       font-weight: bold;
-      color: green;
+      color: black;
     }
     
       .price-off {
@@ -130,7 +130,7 @@
 
       .countdown-timer {
       font-size: 28px;
-      font-weight: bold;
+      font-weight: 300;
       color: red;
       margin-top: 10px;
       margin-bottom: 5px;
@@ -872,7 +872,7 @@
   }
 
   window.onload = function () {
-    const durationInSeconds = 60 * 7740; // x menit
+    const durationInSeconds = (2 * 60 * 60) + (15 * 60); // 2 jam 15 menit
     const display = document.getElementById("countdown");
     if (display) {
       startCountdown(durationInSeconds, display);
