@@ -142,6 +142,15 @@
       padding: 0 10px;
       }
     }
+
+      .spacer {
+      display: block;
+      width: 100%;
+      }
+    
+      .spacer-sm { height: 20px; }
+      .spacer-md { height: 40px; }
+      .spacer-lg { height: 60px; }
     
       h1 {
       font-size: 50px;
@@ -234,6 +243,64 @@
       margin-right: 0.5em;
     }
 
+    .social-proof {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: sans-serif;
+      background-color: #0c0c20;
+      padding: 10px 15px;
+      border-radius: 10px;
+      color: white;
+    }
+    
+    .avatars {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid white;
+      object-fit: cover;
+      margin-left: -10px;
+      z-index: 1;
+    }
+    
+    .avatar:first-child {
+      margin-left: 0;
+    }
+    
+    .avatar-count {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: purple;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid white;
+      margin-left: -10px;
+      z-index: 0;
+    }
+    
+    .rating-text .stars {
+      color: gold;
+      font-size: 16px;
+      line-height: 1;
+    }
+    
+    .rating-text .text {
+      font-size: 14px;
+    }
+
+    
     .review-container {
       display: flex;
       flex-wrap: wrap;
@@ -417,6 +484,8 @@
     </div>
   </div>
   
+<div class="spacer spacer-md"></div>
+
  <div class="container"> 
   <div class="author-section">
     <div>
@@ -426,7 +495,9 @@
       </div>
     </div>
   </div>
-  
+
+  <div class="spacer spacer-md"></div>
+   
     <div style="text-align: center;">
       <img src="images/The 60-Minute Credit Card Debt Solution displayed as a physical book, smartphone, and tablet — offering versatile and convenient ways to master your credit card debt elimination strategy.png" alt="The 60-Minute Credit Card Debt Solution displayed as a physical book, smartphone, and tablet" width="80%" height="80%">
       <h2><strong>The 60-Minute Credit Card Debt Solution</strong></h2>
@@ -458,6 +529,8 @@
         </div>
       </div>
 
+  <div class="spacer spacer-md"></div>
+   
     <div class="cta-wrapper">
       <button class="cta-button">GET INSTANT ACCESS</button>
 
@@ -468,8 +541,22 @@
       </div>
       <span class="original-price">List price $133</span>
     </div>
+      <div class="social-proof">
+        <div class="avatars">
+          <img src="images/user1.jpg" alt="User 1" class="avatar">
+          <img src="images/user2.jpg" alt="User 2" class="avatar">
+          <img src="images/user3.jpg" alt="User 3" class="avatar">
+          <div class="avatar-count">4K+</div>
+        </div>
+        <div class="rating-text">
+          <div class="stars">★★★★★</div>
+          <div class="text">Join 4,800+ students</div>
+        </div>
+      </div>
     </div>
-
+   
+  <div class="spacer spacer-md"></div>
+   
     <div style="text-align: center;">
       <h2><strong>What Is The 60-Minute Credit Card Debt Solution?</strong></h2>
     </div>
@@ -492,6 +579,8 @@
     </div>
  </div>
 
+<div class="spacer spacer-md"></div>
+
 <div class="full-width-section">
   <div style="background-color: black; color: white; padding: 60px 0;">
     <div style="text-align: justify; max-width: 800px; margin: 0 auto; padding: 0 20px;">
@@ -512,7 +601,9 @@
       <p>You’ll be miserable for years as your credit score and financial opportunities plummet...</p>
       <p>This means that many of the challenges you experience with credit card debt will unfortunately not go away if you choose these traditional solutions.</p>
     </div>
-
+      
+    <div class="spacer spacer-sm"></div>
+      
     <div style="text-align: center;">
       <img src="images/Turning-point-debt-free-journey..png" alt="Turning-point-debt-free-journey" width="80%" height="80%">
     </div>
@@ -529,7 +620,9 @@
       <p>This isn’t hypothetical. It’s happening <strong>RIGHT NOW.</strong></p>
       <p>Across the country, thousands of people—people just like you—are waking up to a <strong>SHOCKING TRUTH:</strong></p>
     </div>
-
+      
+  <div class="spacer spacer-sm"></div>
+      
     <div style="text-align: center;">
       <h2 style="color: red; font-weight: bold;"><strong>Credit card companies <i>want</i> you to feel POWERLESS.</strong></h2>
     </div>
@@ -542,10 +635,14 @@
       </ul>
     </div>
 
+  <div class="spacer spacer-sm"></div>
+      
     <div style="text-align: center;">
       <p>...But here’s what they <strong>DON'T</strong> tell you:</p>
     </div>
 
+  <div class="spacer spacer-sm"></div>
+      
     <div style="text-align: center;">
       <h2 style="color: blue; font-weight: bold;"><strong>Creditors <i>FEAR</i> educated negotiators</strong></h2>
     </div>
@@ -559,6 +656,8 @@
       </ul>
         <p>This is the <strong>UNSPOKEN LOOPHOLE</strong> in the system—<i>and it’s how my clients <strong>erase <span style="color: green;">$10.000</span> even <span style="color: green;">$15.000</span> of debt <span style="color: red;">WITHOUT bankruptcy or begging</span></strong>.</i></p>
 
+    <div class="spacer spacer-md"></div>
+      
       <div style="text-align: center;">
         <p>The <strong>SECRET?</strong></p>
       </div>  
@@ -591,6 +690,8 @@
     <p>...And it works <strong>whether you owe <span style="color: green;">$2.000</span> or <span style="color: green;">$50.000</span></strong>—because <strong>the system scales, <i>not the struggle</i></strong>.</p>
   </div>
 
+<div class="spacer spacer-md"></div>
+  
    <div class="cta-wrapper">
     <button class="cta-button">GET INSTANT ACCESS</button>
 
@@ -603,6 +704,8 @@
   </div>
   </div>  
 
+<div class="spacer spacer-md"></div>
+  
   <div style="text-align: center;">
     <h2><strong>Eliminate Your Credit Card Debt in Natural Ways With <span style="color: blue;">The 60-Minute Credit Card Debt Solution</span></strong></h2>
   </div>
@@ -625,6 +728,8 @@
     </p>
   </div>
 
+<div class="spacer spacer-md"></div>
+  
   <div style="text-align: center;">
     <h2><strong>Impressions from Others Who Have Already Read the E-Book</strong></h2>
   </div>
@@ -670,6 +775,8 @@
 
   </div>
 </section>
+
+<div class="spacer spacer-md"></div>
   
 <div style="text-align: center;">
   <h2><strong>Here’s Everything You’ll Get in <span style="color: blue;">The 60-Minute Credit Card Debt Solution</span> 'TODAY'</strong></h2>
@@ -693,6 +800,8 @@
     </ul>
 </div>
 
+<div class="spacer spacer-md"></div>
+  
 <div style="text-align: center;">
   <h2><strong>PLUS 5+ FREE GIFTS (Total Value <span style="color: green;">$74</span>)</strong></h2>
 </div>
@@ -704,6 +813,8 @@
   <img src="images/Cover of The 60-Minute Credit Card Debt Solution E-book.png" alt="Cover of The 60-Minute Credit Card Debt Solution E-book" width="80%" height="80%">
 </div>
 
+<div class="spacer spacer-md"></div>
+  
 <div class="cta-wrapper">
 <button class="cta-button">GET INSTANT ACCESS</button>
 
@@ -716,6 +827,8 @@
   </div>
 </div>
 
+<div class="spacer spacer-md"></div>
+  
 <div style="text-align: center;">
   <h2><strong>90-Day No-Questions-Asked Money-Back Guarantee</strong></h2>
   <img src="images/90-day-money-back-guarantee-seal-ebook.png" alt="90-day-money-back-guarantee-seal-ebook" width="40%" height="40%">
@@ -724,6 +837,8 @@
   <p>Try <strong>The 60-Minute Credit Card Debt Solution</strong> 100% risk-free. If, for any reason, you’re not 100% satisfied with the e-book, simply send me an email at <a href="mailto:reyhanockta217+feedback@email.com" style="color: blue;">reyhanockta217+feedback@email.com</a> within 90 days of your purchase, and my team will return your full investment. No questions asked.</p>
 </div>
 
+<div class="spacer spacer-md"></div>
+  
 <section class="faq-section">
   <div style="text-align: center;">
     <h2><strong>FREQUENTLY ASKED QUESTIONS</strong></h2>
@@ -790,6 +905,8 @@
   </div>
 </section>
 
+<div class="spacer spacer-md"></div>
+  
 <div style="text-align: center;">
   <h2><strong>Real Conversations, Real Results</strong></h2>
   <p>See what real customers are saying in their own words. These unfiltered messages speak louder than any marketing copy, because the transformation is <strong>REAL</strong>.</p>
@@ -826,6 +943,8 @@
   </div>
 </div>
 
+<div class="spacer spacer-sm"></div>
+  
 <footer class="footer">
   <div class="footer-container">
     <h3>
