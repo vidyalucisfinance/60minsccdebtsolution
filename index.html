@@ -840,41 +840,41 @@
 
 <script src="faq.js"></script>
 <script>
-  const COUNTDOWN_DURATION = 8100 * 1000; // 8100 detik dalam milidetik
+  const countdownEl = document.getElementById('countdown');
+  const COUNTDOWN_DURATION = 2 * 60 * 60 + 15 * 60; // 2 jam 15 menit dalam detik
+  const STORAGE_KEY = 'countdownEndTime';
 
   function startCountdown() {
-    const countdownEl = document.getElementById('countdown');
-
-    // Cek apakah sudah ada waktu kadaluarsa di localStorage
-    let endTime = localStorage.getItem('countdownEndTime');
+    let endTime = localStorage.getItem(STORAGE_KEY);
 
     if (!endTime) {
-      // Jika belum ada, set waktu sekarang + durasi
-      endTime = new Date().getTime() + COUNTDOWN_DURATION;
-      localStorage.setItem('countdownEndTime', endTime);
+      endTime = Date.now() + COUNTDOWN_DURATION * 1000;
+      localStorage.setItem(STORAGE_KEY, endTime);
     } else {
       endTime = parseInt(endTime);
     }
 
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = endTime - now;
+    const updateCountdown = () => {
+      const now = Date.now();
+      let timeLeft = Math.floor((endTime - now) / 1000);
 
-      if (distance < 0) {
-        clearInterval(interval);
-        countdownEl.innerHTML = "Waktu habis!";
-        localStorage.removeItem('countdownEndTime');
+      if (timeLeft <= 0) {
+        countdownEl.textContent = '00:00:00';
         return;
       }
 
-      const hours = Math.floor((distance / (1000 * 60 * 60)));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const hours = Math.floor(timeLeft / 3600);
+      const minutes = Math.floor((timeLeft % 3600) / 60);
+      const seconds = timeLeft % 60;
 
-  countdownEl.innerHTML =
-  String(hours).padStart(2, '0') + ':' +
-  String(minutes).padStart(2, '0') + ':' +
-  String(seconds).padStart(2, '0');
+      countdownEl.textContent =
+        String(hours).padStart(2, '0') + ':' +
+        String(minutes).padStart(2, '0') + ':' +
+        String(seconds).padStart(2, '0');
+    };
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   }
 
   startCountdown();
