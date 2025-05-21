@@ -840,46 +840,43 @@
 
 <script src="faq.js"></script>
 <script>
-  function startCountdown(duration, display) {
-    let endTime = localStorage.getItem("countdownEndTime");
+  const COUNTDOWN_DURATION = 8100 * 1000; // 8100 detik dalam milidetik
 
-    // Kalau belum ada, set end time sekarang + duration
+  function startCountdown() {
+    const countdownEl = document.getElementById('countdown');
+
+    // Cek apakah sudah ada waktu kadaluarsa di localStorage
+    let endTime = localStorage.getItem('countdownEndTime');
+
     if (!endTime) {
-      const now = new Date().getTime();
-      endTime = now + duration * 1000;
-      localStorage.setItem("countdownEndTime", endTime);
+      // Jika belum ada, set waktu sekarang + durasi
+      endTime = new Date().getTime() + COUNTDOWN_DURATION;
+      localStorage.setItem('countdownEndTime', endTime);
+    } else {
+      endTime = parseInt(endTime);
     }
 
-    const timerInterval = setInterval(() => {
+    const interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = endTime - now;
 
-      if (distance <= 0) {
-        clearInterval(timerInterval);
-        display.textContent = "00:00:00";
-        localStorage.removeItem("countdownEndTime");
-      } else {
-        const hours = Math.floor((distance / (1000 * 60 * 60)));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        display.textContent =
-          String(hours).padStart(2, '0') + ":" +
-          String(minutes).padStart(2, '0') + ":" +
-          String(seconds).padStart(2, '0');
+      if (distance < 0) {
+        clearInterval(interval);
+        countdownEl.innerHTML = "Waktu habis!";
+        localStorage.removeItem('countdownEndTime');
+        return;
       }
+
+      const hours = Math.floor((distance / (1000 * 60 * 60)));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
   }
 
-  window.onload = function () {
-    const durationInSeconds = (2 * 60 * 60) + (15 * 60); // 2 jam 15 menit
-    const display = document.getElementById("countdown");
-    if (display) {
-      startCountdown(durationInSeconds, display);
-    }
-  };
+  startCountdown();
 </script>
-
 
 </body>
 </html>
