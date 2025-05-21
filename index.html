@@ -248,6 +248,7 @@
       align-items: center;
       gap: 10px;
       font-family: verdana, sans-serif;
+      font-color: black;
       background-color: #f8f8f8;
       padding: 10px 15px;
       border-radius: 10px;
@@ -290,10 +291,28 @@
       z-index: 0;
     }
     
-    .rating-text .stars {
-      color: gold;
+    .stars {
+      display: flex;
       font-size: 16px;
       line-height: 1;
+    }
+    
+    .full {
+      color: gold;
+    }
+    
+    .half {
+      position: relative;
+      display: inline-block;
+      color: #ccc;
+    }
+    
+    .half::before {
+      content: "★";
+      color: gold;
+      position: absolute;
+      width: 50%;
+      overflow: hidden;
     }
     
     .rating-text .text {
@@ -541,6 +560,7 @@
       </div>
       <span class="original-price">List price $133</span>
     </div>
+    </div>
       <div class="social-proof">
         <div class="avatars">
           <img src="images/user1.jpg" alt="User 1" class="avatar">
@@ -549,11 +569,12 @@
           <div class="avatar-count">4K+</div>
         </div>
         <div class="rating-text">
-          <div class="stars">★★★★★</div>
-          <div class="text">Join 4,800+ students</div>
+          <div class="stars">
+            <span class="full">★★★★</span><span class="half">★</span>
+              </div>
+          <div class="text">Trusted by 2,800+ readers</div>
         </div>
       </div>
-    </div>
    
   <div class="spacer spacer-md"></div>
    
