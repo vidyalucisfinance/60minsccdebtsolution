@@ -260,16 +260,15 @@
       margin-right: 0.5em;
     }
 
-      .social-proof {
-      display: flex;
+    .social-proof {
+      display: inline-flex; /* Ganti dari 'flex' jadi 'inline-flex' biar bisa di-center */
       align-items: center;
       gap: 10px;
       font-family: verdana, sans-serif;
-      font-color: black;
       background-color: #f8f8f8;
       padding: 10px 15px;
       border-radius: 10px;
-      color: white;
+      color: black; /* ganti dari 'white' jadi 'black' */
     }
     
     .avatars {
@@ -322,12 +321,14 @@
       position: relative;
       display: inline-block;
       color: #ccc;
+      width: 16px; /* pastikan ada lebar */
     }
     
     .half::before {
       content: "★";
       color: gold;
       position: absolute;
+      left: 0;
       width: 50%;
       overflow: hidden;
     }
@@ -335,8 +336,7 @@
     .rating-text .text {
       font-size: 14px;
     }
-
-    
+ 
     .review-container {
       display: flex;
       flex-wrap: wrap;
@@ -578,20 +578,27 @@
       <span class="original-price">List price $133</span>
     </div>
     </div>
+    <!-- Social Proof Wrapper -->
+    <div style="text-align: center; margin-top: 30px;">
       <div class="social-proof">
         <div class="avatars">
-          <img src="images/user1.jpg" alt="User 1" class="avatar">
-          <img src="images/user2.jpg" alt="User 2" class="avatar">
-          <img src="images/user3.jpg" alt="User 3" class="avatar">
-          <div class="avatar-count">4K+</div>
+          <img src="img1.jpg" class="avatar">
+          <img src="img2.jpg" class="avatar">
+          <img src="img3.jpg" class="avatar">
+          <div class="avatar-count">2K+</div>
+        </div>
+        <div class="stars">
+          <span class="full">★</span>
+          <span class="full">★</span>
+          <span class="full">★</span>
+          <span class="full">★</span>
+          <span class="half">★</span>
         </div>
         <div class="rating-text">
-          <div class="stars">
-            <span class="full">★★★★</span><span class="half">★</span>
-              </div>
-          <div class="text">Trusted by 2,800+ readers</div>
+          <span class="text">Trusted by 2,800+ readers</span>
         </div>
       </div>
+    </div>
    
   <div class="spacer spacer-md"></div>
    
