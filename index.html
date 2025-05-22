@@ -595,15 +595,17 @@
           <img src="img3.jpg" class="avatar">
           <div class="avatar-count">2K+</div>
         </div>
-        <div class="stars">
-          <span class="full">★</span>
-          <span class="full">★</span>
-          <span class="full">★</span>
-          <span class="full">★</span>
-          <span class="half">★</span>
-        </div>
-        <div class="rating-text">
-          <span class="text">Trusted by 2,800+ readers</span>
+        <div class="rating">
+          <div class="stars">
+            <span class="full">★</span>
+            <span class="full">★</span>
+            <span class="full">★</span>
+            <span class="full">★</span>
+            <span class="half">★</span>
+          </div>
+          <div class="rating-text">
+            <span class="text">Trusted by 2,800+ readers</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1016,44 +1018,46 @@
 
 <script src="faq.js"></script>
 <script>
-  const countdownEl = document.getElementById('countdown');
-  const COUNTDOWN_DURATION = 2 * 60 * 60 + 15 * 60; // 2 jam 15 menit dalam detik
-  const STORAGE_KEY = 'countdownEndTime';
+  document.addEventListener('DOMContentLoaded', function () {
+    const countdownEl = document.getElementById('countdown');
+    const COUNTDOWN_DURATION = 2 * 60 * 60 + 15 * 60; // 2 jam 15 menit dalam detik
+    const STORAGE_KEY = 'countdownEndTime';
 
-  function startCountdown() {
-    let endTime = localStorage.getItem(STORAGE_KEY);
+    function startCountdown() {
+      let endTime = localStorage.getItem(STORAGE_KEY);
 
-    if (!endTime) {
-      endTime = Date.now() + COUNTDOWN_DURATION * 1000;
-      localStorage.setItem(STORAGE_KEY, endTime);
-    } else {
-      endTime = parseInt(endTime);
-    }
-
-    const updateCountdown = () => {
-      const now = Date.now();
-      let timeLeft = Math.floor((endTime - now) / 1000);
-
-      if (timeLeft <= 0) {
-        countdownEl.textContent = '00:00:00';
-        return;
+      if (!endTime) {
+        endTime = Date.now() + COUNTDOWN_DURATION * 1000;
+        localStorage.setItem(STORAGE_KEY, endTime);
+      } else {
+        endTime = parseInt(endTime);
       }
 
-      const hours = Math.floor(timeLeft / 3600);
-      const minutes = Math.floor((timeLeft % 3600) / 60);
-      const seconds = timeLeft % 60;
+      const updateCountdown = () => {
+        const now = Date.now();
+        let timeLeft = Math.floor((endTime - now) / 1000);
 
-      countdownEl.textContent =
-        String(hours).padStart(2, '0') + ':' +
-        String(minutes).padStart(2, '0') + ':' +
-        String(seconds).padStart(2, '0');
-    };
+        if (timeLeft <= 0) {
+          countdownEl.textContent = '00:00:00';
+          return;
+        }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  }
+        const hours = Math.floor(timeLeft / 3600);
+        const minutes = Math.floor((timeLeft % 3600) / 60);
+        const seconds = timeLeft % 60;
 
-  startCountdown();
+        countdownEl.textContent =
+          String(hours).padStart(2, '0') + ':' +
+          String(minutes).padStart(2, '0') + ':' +
+          String(seconds).padStart(2, '0');
+      };
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+
+    startCountdown();
+  });
 </script>
 
 </body>
