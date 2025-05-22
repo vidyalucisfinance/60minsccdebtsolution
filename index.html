@@ -268,7 +268,8 @@
       background-color: #f8f8f8;
       padding: 10px 15px;
       border-radius: 10px;
-      color: black; /* ganti dari 'white' jadi 'black' */
+      color: black;
+      margin-top: 0;
     }
     
     .avatars {
@@ -332,8 +333,15 @@
       width: 50%;
       overflow: hidden;
     }
-    
-    .rating-text .text {
+
+      .rating {
+      display: flex;
+      flex-direction: column;  /* Biar bintang dan teks jadi vertikal */
+      align-items: flex-start; /* Biar tetap rata kiri */
+      gap: 2px;                /* Jarak kecil antar elemen */
+    }
+
+      .rating-text .text {
       font-size: 14px;
     }
  
@@ -579,7 +587,7 @@
     </div>
     </div>
     <!-- Social Proof Wrapper -->
-    <div style="text-align: center; margin-top: 30px;">
+    <div style="text-align: center; margin-top: 10px;">
       <div class="social-proof">
         <div class="avatars">
           <img src="img1.jpg" class="avatar">
