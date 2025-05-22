@@ -1,1 +1,1 @@
-localStorage.removeItem("countdownEndTime")
+localStorage.removeItem('countdownEndTime');
