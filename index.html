@@ -846,18 +846,19 @@
 
 <div class="spacer spacer-md"></div>
 
-<div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px;">
+  
   <h2><strong>From Debt to Freedom: Your 60-Minute Turning Point</strong></h2>
     <img src="images/credit-card-debt-stress-overwhelmed-with-bills.png" style= "width: 40%; height: 40%; border-radius: 10px">
-      <h3><strong>Drowning in Debt</strong></h3>
+      <h3 style="margin-top: 7px; margin-bottom: 5px;"><strong>Drowning in Debt</strong></h3>
       <p>Another bill I can’t pay... How did it get this bad?</p>
     <img src="images/down-arrow-to-ebook.png" style="width: 200px;">
     <img src="images/reading-debt-solution-ebook-taking-action-financial-progress.png" style= "width: 40%; height: 40%; border-radius: 10px">
-      <h3><strong>The Turning Point</strong></h3>
+      <h3 style="margin-top: 7px; margin-bottom: 5px;"><strong>The Turning Point</strong></h3>
       <p>60 minutes. One decision. A fresh start begins now.</p>
     <img src="images/down-arrow-to-ebook.png" style="width: 200px;">
     <img src="images/credit-card-debt-free-financial-freedom-after-ebook.png" style= "width: 40%; height: 40%; border-radius: 10px">
-      <h3><strong>Financial Freedom Achieved</strong></h3>
+      <h3 style="margin-top: 7px; margin-bottom: 5px;"><strong>Financial Freedom Achieved</strong></h3>
       <p>No more debt. No more stress. Just peace, clarity, and control.</p>
 </div>
   
@@ -1085,48 +1086,5 @@
 </footer>
 
 <script src="faq.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const countdownEl = document.getElementById('countdown');
-    const COUNTDOWN_DURATION = 2 * 60 * 60 + 15 * 60; // 2 jam 15 menit dalam detik
-    const STORAGE_KEY = 'countdownEndTime';
-
-    function startCountdown() {
-      let endTime = localStorage.getItem(STORAGE_KEY);
-
-      if (!endTime) {
-        endTime = Date.now() + COUNTDOWN_DURATION * 1000;
-        localStorage.setItem(STORAGE_KEY, endTime);
-      } else {
-        endTime = parseInt(endTime);
-      }
-
-      const updateCountdown = () => {
-        const now = Date.now();
-        let timeLeft = Math.floor((endTime - now) / 1000);
-
-        if (timeLeft <= 0) {
-          countdownEl.textContent = '00:00:00';
-          return;
-        }
-
-        const hours = Math.floor(timeLeft / 3600);
-        const minutes = Math.floor((timeLeft % 3600) / 60);
-        const seconds = timeLeft % 60;
-
-        countdownEl.textContent =
-          String(hours).padStart(2, '0') + ':' +
-          String(minutes).padStart(2, '0') + ':' +
-          String(seconds).padStart(2, '0');
-      };
-
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    }
-
-    startCountdown();
-  });
-</script>
-
 </body>
 </html>
