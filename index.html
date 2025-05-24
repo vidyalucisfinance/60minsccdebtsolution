@@ -374,7 +374,7 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      overflow-x: hidden;
+      box-sizing: border-box;
     }
     
     .decorative-image-container {
@@ -382,15 +382,12 @@
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      max-width: 960px;     /* kontrol lebar maksimal */
       width: 100%;
       text-align: center;
+      box-sizing: border-box;
     }
 
-      html, body {
-      margin: 0;
-      padding: 0;
-    }
-    
     .grid-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr); /* 2 kolom dengan lebar sama */
@@ -547,12 +544,13 @@
   </div>
   
 <div class="spacer spacer-md"></div>
-  <div class="container"> 
-    <div style="text-align: center;">
-      <img src="images/The 60-Minute Credit Card Debt Solution displayed as a physical book, smartphone, and tablet — offering versatile and convenient ways to master your credit card debt elimination strategy.png" alt="The 60-Minute Credit Card Debt Solution displayed as a physical book, smartphone, and tablet" width="80%" height="80%">
-      <h2><strong>The 60-Minute Credit Card Debt Solution</strong></h2>
-      <h3>for people struggling with credit card debt</h3>
-    </div>
+  
+<div class="container"> 
+  <div style="text-align: center;">
+    <img src="images/The 60-Minute Credit Card Debt Solution displayed as a physical book, smartphone, and tablet — offering versatile and convenient ways to master your credit card debt elimination strategy.png" alt="The 60-Minute Credit Card Debt Solution displayed as a physical book, smartphone, and tablet" width="80%" height="80%">
+    <h2><strong>The 60-Minute Credit Card Debt Solution</strong></h2>
+    <h3>for people struggling with credit card debt</h3>
+  </div>
 
     <div>
       <div style="display: flex; align-items: center; font-size: 24px; color: gold;">
@@ -876,7 +874,8 @@
 <div class="spacer spacer-md"></div>
 
 <section class="decorative-image-section">
-  <h2 style="text-align: center; color: white"><strong>From Debt to Freedom: Your 60-Minute Turning Point</strong></h2>
+  <div>
+    <h1 style="color: white; text-align: center;"><strong>From Debt to Freedom: Your 60-Minute Turning Point</strong></h1>
     <div class="decorative-image-container">
       <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; max-width: 100%;">
         <img src="images/credit-card-debt-stress-overwhelmed-with-bills.png" style= "width: 50%; height: 50%; border-radius: 10px">
@@ -892,6 +891,7 @@
             <p style="margin-top: 0;">No more debt. No more stress. Just peace, clarity, and control.</p>
     </div>
   </div>
+</div>   
 </section>
   
 <div class="spacer spacer-md"></div>
