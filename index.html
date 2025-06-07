@@ -379,7 +379,8 @@
       display: flex;
       justify-content: center;
       position: relative;
-      width: 100vw;
+width: 100%;
+max-width: 100vw;
       overflow-x: hidden;
       padding: 60px;
       position: relative;
@@ -477,7 +478,8 @@
       text-align: center;
       color: white;
       position: relative;
-      width: 100vw;
+width: 100%;
+max-width: 100vw;
       left: 50%;
       right: 50%;
       margin-left: -50vw;
@@ -486,10 +488,11 @@
     }
 
     .footer-logo {
-      width: 24px;
-      height: 24px;
+      width: 40px; /* atau sesuaikan, biar gak terlalu kecil */
+      height: auto;
       vertical-align: middle;
       margin-right: 8px;
+      display: inline-block;
     }
 
     .footer-container {
